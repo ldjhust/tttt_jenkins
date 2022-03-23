@@ -8,4 +8,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "This will always run"
+        }
+        success {
+            echo "This will only run if success"
+        }
+        failure {
+            echo "This will only run if failure"
+        }
+    }
 }
